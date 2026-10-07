@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#11143b">
+    <meta name="description" content="السكب — عصائر ومشروبات سورية منعشة، تُحضّر بحب وتصل لبابك.">
+    <meta property="og:title" content="السكب | طعم يردّ الروح">
+    <meta property="og:description" content="عصائر ومشروبات سورية منعشة، تُحضّر بحب وتصل لبابك.">
+    <meta property="og:type" content="website">
+    <title>السكب — طعم يردّ الروح</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='28' fill='%2311143b'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' fill='%23d2ff72'%3Eس%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#products">انتقل إلى المنتجات</a>
+    <header class="site-header">
+      <a class="brand-mark" href="#" aria-label="السكب — الصفحة الرئيسية">
+        <span class="brand-icon" aria-hidden="true"><span></span></span>
+        <span class="brand-name">السكب</span>
+      </a>
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <a href="#products">مشروباتنا</a>
+        <a href="#our-story">حكايتنا</a>
+        <a href="#delivery">التوصيل</a>
+      </nav>
+      <button class="cart-trigger" id="cart-trigger" type="button" aria-label="افتح سلتك" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 1.9-1.4L22 8H7"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>
+        <span>سلّتي</span><span class="cart-count" id="cart-count" aria-live="polite">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-art" id="hero-art" role="img" aria-label="مشهد منعش من عالم السكب">
+          <span class="hero-stamp">من قلب الشام<br><b>بكل حبّ</b></span>
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> رشفة بتغيّر نهارك</p>
+            <h1 id="hero-title">السكب<span class="hero-period">.</span></h1>
+            <p class="hero-subtitle">طعم يردّ الروح،<br>وبرد بيليق فيك.</p>
+            <a class="hero-cta" href="#products">اكتشف النكهات <span aria-hidden="true">←</span></a>
+          </div>
+          <span class="hero-orbit orbit-one" aria-hidden="true"></span>
+          <span class="hero-orbit orbit-two" aria-hidden="true"></span>
+          <span class="hero-caption">صُنع على مهله · قُدّم على كيفك</span>
+        </div>
+      </section>
+
+      <section class="shop-section" id="products" aria-labelledby="shop-title">
+        <div class="section-topline"><span>من برّادنا لعندك</span><span class="topline-rule"></span><span id="product-total">٠ منتجات</span></div>
+        <div class="shop-heading">
+          <div>
+            <p class="eyebrow section-eyebrow">اختار مزاجك</p>
+            <h2 id="shop-title">شي بارد… <em>عالآخر.</em></h2>
+            <p class="section-description">نكهات صادقة ومكوّنات منعرفها بالاسم.</p>
+          </div>
+          <div class="shop-tools">
+            <label class="search-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+              <span class="visually-hidden">ابحث عن مشروب</span>
+              <input id="product-search" type="search" placeholder="شو عبالك؟" autocomplete="off">
+              <kbd>/</kbd>
+            </label>
+          </div>
+        </div>
+        <div class="filters" id="category-filters" role="group" aria-label="تصفية حسب نوع المشروب"></div>
+        <div class="product-grid" id="product-grid" aria-live="polite" aria-busy="true">
+          <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
+        </div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-orbit" aria-hidden="true"></span>
+          <h3>ما لقينا هالنكهة</h3>
+          <p>جرّب كلمة تانية أو رجّع كل المشروبات.</p>
+          <button class="text-button" id="reset-filters" type="button">عرض كل المشروبات</button>
+        </div>
+      </section>
+
+      <section class="manifesto" id="our-story" aria-labelledby="story-title">
+        <div class="manifesto-mark" aria-hidden="true">س</div>
+        <div class="manifesto-copy">
+          <p class="eyebrow">حكاية من هون</p>
+          <h2 id="story-title">منعرف طعم<br><em>اللمة الحلوة.</em></h2>
+        </div>
+        <p class="manifesto-note">من أول عصرة لآخر نقطة، بنختار الطعم اللي بيشبهنا. وصفات سورية باردة، بسيطة، ومن القلب. لأن أحلى شي… لما ينصبّ عالراحة.</p>
+        <span class="manifesto-annotation">دمشق · ٣٦° مئوية · وقت العصير</span>
+      </section>
+
+      <section class="delivery-strip" id="delivery" aria-label="تفاصيل التوصيل">
+        <div class="delivery-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M6 13h23v22H6zM29 21h8l6 7v7H29z"/><circle cx="15" cy="36" r="4"/><circle cx="36" cy="36" r="4"/><path d="M34 24v5h7"/></svg>
+        </div>
+        <div><p class="eyebrow">لسّا ساقعة بالطريق</p><h2>من برّادنا… <em>لباب بيتك.</em></h2></div>
+        <p class="delivery-detail">اطلبها عالواتساب، ومنتواصل معك لنأكد منطقتك ووقت التوصيل.</p>
+        <a class="delivery-link" href="#products">شوف المنيو <span aria-hidden="true">←</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#">السكب<span>.</span></a>
+      <p>رشفة من الشام، بتردّ الروح.</p>
+      <span class="footer-location">صنع بمحبة في سوريا <span class="footer-spark" aria-hidden="true"></span></span>
+    </footer>
+
+    <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+    <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" inert>
+      <div class="drawer-header">
+        <div><p class="eyebrow">اختياراتك الحلوة</p><h2 id="cart-title">سلّتك <span id="drawer-count">(٠)</span></h2></div>
+        <button class="close-drawer" id="close-drawer" type="button" aria-label="إغلاق السلة"><span></span><span></span></button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty"><span class="empty-cart-illustration" aria-hidden="true"></span><h3>لسّا السلة عطشانة</h3><p>اختار نكهة بتشبه مزاجك.</p><button type="button" class="text-button" id="browse-products">يلا نختار</button></div>
+      <div class="drawer-footer" id="drawer-footer" hidden>
+        <div class="cart-total"><span>المجموع التقريبي</span><strong id="cart-total">٠ ل.س</strong></div>
+        <p class="whatsapp-note">التوصيل ومنطقة الخدمة منأكدهم معك على واتساب.</p>
+        <a class="whatsapp-order" id="whatsapp-order" href="#" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 11.7a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.4-4.8a8.4 8.4 0 1 1 16-4z"/><path d="M9 8.4c.2-.4.4-.4.7-.4h.4c.2 0 .4 0 .5.4l.7 1.7c.1.2.1.4 0 .6l-.5.7c-.2.2-.3.4-.1.7a7 7 0 0 0 2.9 2.8c.3.1.5.1.6-.1l.9-1c.2-.2.4-.2.7-.1l1.6.8c.3.1.4.3.4.5 0 .3-.2 1.3-.8 1.7-.5.5-1.3.7-2 .5a12 12 0 0 1-4.4-2.4 11 11 0 0 1-3-3.8c-.3-.7-.3-1.5.1-2.2.4-.7 1-1.3 1.3-1.3z"/></svg>
+          <span>انقر للشراء عبر واتساب</span>
+          <span class="whatsapp-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <p class="drawer-footnote">ما في دفع إلكتروني — الطلب بيتأكد مباشرة مع فريقنا.</p>
+    </aside>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
